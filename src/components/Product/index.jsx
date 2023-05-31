@@ -14,17 +14,21 @@ export default function Product(props) {
     const { title, price, rating, image, id } = props.data;
     let dollars = Math.floor(price);
     let cents = (price.toFixed(2) - dollars).toFixed(2) * 100;
-    const [favorite, setFavorite] = useState(false);
+    const [favorite, setFavorite] = useState(false)
 
-    console.log("name: " + title)
-    console.log("id:" + id)
-    console.log("favorite:" + favorite)
-    console.log("favArrIDs: " + fav.map(item => item.id))
+    // console.log("name: " + title)
+    // console.log("id:" + id)
+    // console.log("favorite:" + favorite)
+    // console.log("fav: " + fav[0])
+    // console.log("favArrIDs: " + fav.map(item => item.id))
+    // console.log("propsData: " + props.data.price)
+    console.log(title + " got changed")
+    console.log("isfavorite: " + favorite)
 
     const checkFavorites = () => {
-        fav.map((item) => {
-            if (item.id === id) {
-                setFavorite(true);
+        fav.forEach((item) => {
+            if (item.id === props.key) {
+                setFavorite(true)
             }
         });
     };
@@ -39,11 +43,11 @@ export default function Product(props) {
 
     const wishlistClickhandler = () => {
         if (!favorite) {
-            dispatch(addToFavorites(props.data));
-            setFavorite(true);
+            dispatch(addToFavorites(props.data))
+            setFavorite(true)
         } else {
-            dispatch(removeFromFavorites(id));
-            setFavorite(false);
+            dispatch(removeFromFavorites(id))
+            setFavorite(false)
         }
     };
 
@@ -76,9 +80,8 @@ export default function Product(props) {
                         </span>
                     </p>
                     <div class="card-text price-div">
-                        {" "}
-                        <div className="dollar">&#36;&nbsp;</div>{" "}
-                        <div className="price">{dollars}</div>{" "}
+                        <div className="dollar">&#36;&nbsp;</div>
+                        <div className="price">{dollars}</div>
                         <div className="cents">{cents !== 0 ? cents : "00"}</div>
                     </div>
                     <div className="d-grid gap-2">

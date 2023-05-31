@@ -20,7 +20,7 @@ export default function ProductsList() {
     return (
         <div class="row">
             {
-                products.map((product => <Product data={product}/>))
+                products.map((product => <Product key={product.id} data={product}/>))
             }
         </div>
     )
