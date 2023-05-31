@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #f9f9f9;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +12,332 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.greyish-back{
+  background-color: #e6e6e6;
+}
+
+.price{
+  font-size: 1.3em;
+}
+.cents{
+  font-size: 1em;
+  color: #6b6c6d;
+}
+
+.dollar{
+  color: #6b6c6d;
+  padding-top: 0.3em;
+  font-weight: 700;
+}
+
+.price-div{
+  display: flex;
+  justify-content:baseline;
+  margin-bottom: 1em;
+}
+/* -----------------------------------Navbar css start------------------------------------------------- */
+
+.navbar-component {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+
+.btn1-nav {
+  border: 1px solid rgb(124, 119, 119);
+  width: 100%;
+  display: flex;
+  color: black;
+  background-color: #f9f9f9;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+.btn1-nav:hover {
+  color: black;
+  border: 2px solid black;
+}
+
+.btn2-nav {
+  width: 13%;
+  border: none;
+}
+
+.btn2-nav:hover {
+  border: 2px solid black;
+}
+
+.main-drop-nav {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drop-nav {
+  width: 28%;
+}
+
+.logo-nav {
+  border: 3px solid black;
+  border-radius: 50%;
+  height: 3em;
+}
+
+.appName-nav {
+  font-size: 2.5em;
+  color: #70d8fa;
+}
+
+.hName-nav {
+  color: black;
+}
+
+.loginText-nav {
+  font-size: 0.9em;
+  width: 100%;
+  text-align: center;
+}
+
+.signupText-nav {
+  font-size: 0.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.cart-items-num {
+  /* border-radius: 50%; */
+  color: red;
+  position: absolute;
+  top: 32%;
+  right: 2.9%;
+}
+
+.loggedInText-nav {
+  padding-top: 0.6em;
+  margin-left: 0.3em;
+  display: flex;
+  align-items: center;
+}
+
+/* -----------------------------------Navbar css end------------------------------------------------- */
+
+/* -----------------------------------CategoryBar css start------------------------------------------------- */
+
+.category-bar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.category-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+/* -----------------------------------CategoryBar css end------------------------------------------------- */
+
+
+/* -----------------------------------Product Component css start------------------------------------------------- */
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+.products-title{
+  font-weight: 500;
+}
+
+/* -----------------------------------product Component css end------------------------------------------------- */
+
+
+/* -----------------------------------Login Page css start------------------------------------------------- */
+
+.login-form-out {
+  border: 3px solid rgba(215, 212, 212, 0.603);
+  border-radius: 2%;
+  margin: 3em 30em 2em 30em;
+  padding: 1em 5em 3em 5em;
+}
+
+.login-form-out a {
+  text-decoration: none;
+}
+
+.form-heading {
+  font-size: 4em;
+  font-weight: 300;
+  color: rgb(123, 124, 124);
+}
+
+/* -----------------------------------Login Page css end------------------------------------------------- */
+
+/* -----------------------------------Category Component css start------------------------------------------------- */
+
+.resize {
+  height: 16rem;
+  width: 12rem;
+
+}
+
+.img-div {
+  padding: 2em;
+
+}
+
+.cart-img {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  margin-bottom: 0.3em;
+}
+
+.wishlist-btn {
+  position: absolute;
+  border: none;
+  background: none;
+  right: 3%;
+  top: 2%;
+}
+
+.long-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating {
+  display: flex;
+  margin-left: 2%;
+  padding-bottom: 0;
+  font-size: 1.1em;
+  align-items: normal;
+  color: rgb(154, 160, 160);
+}
+
+.try {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.rating-text {
+  margin-bottom: 0.5em;
+}
+
+/* -----------------------------------Category Component css end------------------------------------------------- */
+
+/* -----------------------------------Stars Component css start------------------------------------------------- */
+
+.stars-div {
+  display: flex;
+  align-items: normal;
+}
+
+/* -----------------------------------Stars Component css end------------------------------------------------- */
+
+/* -----------------------------------ProductDetails Page css start--------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+}
+
+.inner-body {
+  margin: 0;
+}
+
+.text-part {
+  padding-left: 3%;
+}
+
+.details-img{
+  padding: 3%;
+}
+
+.details-txt{
+  padding: 3%;
+}
+
+.wishlist-btn-prdetails{
+  position: absolute;
+  top: 3%;
+  left: 1.5%;
+  background: none;
+  border: none;
+}
+
+/* -----------------------------------ProductDetails Page css end----------------------------------------------- */
+
+/* -----------------------------------CartProducts Component & Cart Page css start----------------------------------------------- */
+.cart-item-image {
+  padding: 1%;
+  padding-top: 4%;
+}
+
+.cart-item-txt {
+  padding: 1%;
+}
+
+.plus-sign,
+.minus-sign {
+  border: 2px solid black;
+  padding: 0.3em 0.5em 0.7em 0.5em;
+}
+
+.plus-sign {
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+.minus-sign {
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.quantity-cart {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 0.3em 0.8em 0.7em 0.8em;
+}
+
+.cart-summary-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sticky-summary {
+  position: sticky;
+  top: 25%;
+}
+
+.plus-btn,
+.minus-btn {
+  border: none;
+  background: none;
+}
+
+.cart-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* -----------------------------------CartProducts Component & Cart Page css end----------------------------------------------- */
+
+/* -----------------------------------NotFound Page css start------------------------------------------------- */
+
+.btn-txt-clr{
+  color: white;
+}
+
+/* -----------------------------------NotFound Page css end------------------------------------------------- */
