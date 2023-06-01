@@ -22,7 +22,7 @@ export default function ProductDetailspage() {
     const [favorite, setFavorite] = useState(false);
 
     const checkFavorites = () => {
-        fav.map((item) => {
+        fav.forEach((item) => {
             console.log("objId: " + typeof item.id);
             if (item.id == id) {
                 setFavorite(true);
@@ -122,7 +122,7 @@ export default function ProductDetailspage() {
                                         </p>
                                     </span>
                                 </p>
-                                <div class="card-text price-div">
+                                <div className="card-text price-div">
                                     {" "}
                                     <div className="dollar">&#36;&nbsp;</div>{" "}
                                     <div className="price">{dollars}</div>{" "}

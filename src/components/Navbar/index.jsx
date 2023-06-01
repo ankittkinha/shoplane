@@ -46,11 +46,11 @@ export default function Navbar() {
             <div className='categoriesbar-component'>
                 <div>
                     <ul className='category-bar'>
-                        <li className="products-title"><Link to={`/`}><i>All</i></Link></li>
-                        <li className="products-title"><Link to={`/products/electronics`}><i>Electronics</i></Link></li>
-                        <li className="products-title"><Link to={`/products/jewelery`}><i>Jewellery</i></Link></li>
-                        <li className="products-title"><Link to={`/products/men's clothing`}><i>Men's Clothing</i></Link></li>
-                        <li className="products-title"><Link to={`/products/women's clothing`}><i>Women's Clothing</i></Link></li>
+                        <li className="products-title"><Link to="/"><i>All</i></Link></li>
+                        <li className="products-title"><Link to="/products/electronics"><i>Electronics</i></Link></li>
+                        <li className="products-title"><Link to="/products/jewelery"><i>Jewellery</i></Link></li>
+                        <li className="products-title"><Link to="/products/men's clothing"><i>Men's Clothing</i></Link></li>
+                        <li className="products-title"><Link to="/products/women's clothing"><i>Women's Clothing</i></Link></li>
                     </ul>
                 </div>
                 <hr />

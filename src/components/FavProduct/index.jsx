@@ -22,8 +22,8 @@ export default function FavProduct(props) {
     };
 
     return (
-        <div class="col-sm-3 mb-3 mb-sm-0">
-            <div class="card">
+        <div className="col-sm-3 mb-3 mb-sm-0">
+            <div className="card">
                 <div className="text-center img-div">
                     <button className="wishlist-btn" onClick={wishlistClickhandler}>
                         <img src={redHeartImg} alt="image" height="20px" width="20px" />
@@ -33,8 +33,8 @@ export default function FavProduct(props) {
                     </Link>
                 </div>
 
-                <div class="card-body greyish-back">
-                    <p class="card-title long-title">
+                <div className="card-body greyish-back">
+                    <p className="card-title long-title">
                         <Link to={`/productdetails/${id}`}>
                             <span className="products-title">{title}</span>
                         </Link>
@@ -45,14 +45,14 @@ export default function FavProduct(props) {
                             <p className="rating-text">({rating.count})</p>
                         </span>
                     </p>
-                    <div class="card-text price-div">
+                    <div className="card-text price-div">
                         {" "}
                         <div className="dollar">&#36;&nbsp;</div>{" "}
                         <div className="price">{dollars}</div>{" "}
                         <div className="cents">{cents !== 0 ? cents : "00"}</div>
                     </div>
                     <div className="d-grid gap-2">
-                        <button onClick={onClickHandler} class="btn btn-primary btn-block">
+                        <button onClick={onClickHandler} className="btn btn-primary btn-block">
                             <img src={cartImg} className="cart-img" alt="image" />
                             Add To Cart
                         </button>

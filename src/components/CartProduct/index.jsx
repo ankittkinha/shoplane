@@ -29,23 +29,23 @@ export default function CartProduct(props) {
 
     return (
         <div>
-            <div class="card mb-3" style={{ maxWwidth: "540px" }}>
-                <div class="row g-0">
-                    <div class="col-md-4 cart-item-image text-center">
+            <div className="card mb-3" style={{ maxWwidth: "540px" }}>
+                <div className="row g-0">
+                    <div className="col-md-4 cart-item-image text-center">
                         <Link to={`/productdetails/${id}`}>
                             <img
                                 src={image}
-                                class="img-fluid rounded-start resize"
+                                className="img-fluid rounded-start resize"
                                 alt="image"
                             />
                         </Link>
                     </div>
-                    <div class="col-md-8 cart-item-txt greyish-back">
-                        <div class="card-body">
+                    <div className="col-md-8 cart-item-txt greyish-back">
+                        <div className="card-body">
                             <Link to={`/productdetails/${id}`}>
-                                <h4 class="card-title products-title">{title}</h4>
+                                <h4 className="card-title products-title">{title}</h4>
                             </Link>
-                            <p class="card-text cart-desc">
+                            <p className="card-text cart-desc">
                                 <span className="products-title">Description: </span>
                                 {description}
                             </p>
@@ -55,7 +55,7 @@ export default function CartProduct(props) {
                                     <p className="rating-text">({rating.count})</p>
                                 </span>
                             </p>
-                            <div class="card-text price-div"> 
+                            <div className="card-text price-div"> 
                                 <div className="dollar">&#36;&nbsp;</div>
                                 <div className="price">{dollars}</div>
                                 <div className="cents">{cents !== 0 ? cents : "00"}</div>

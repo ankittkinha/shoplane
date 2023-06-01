@@ -10,7 +10,7 @@ export default function RatingStars(props) {
   return (
     <div className='stars-div'>
       {
-        yellowStars.map((el) => {
+        yellowStars.map(el => {
           return (
             <IconContext.Provider value={{ color: "#f5d72f" }}>
               <BsStarFill />
@@ -19,7 +19,7 @@ export default function RatingStars(props) {
         })
       }
       {
-        darkStars.map((el) => {
+        darkStars.map(el => {
           return <BsStarFill />
         })
       }

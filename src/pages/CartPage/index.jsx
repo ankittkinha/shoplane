@@ -15,15 +15,15 @@ export default function CartPage() {
     <div>
       <Navbar />
 
-      <div class="row">
-      <div class="col-sm-10 mb-3 mb-sm-0">
+      <div className="row">
+      <div className="col-sm-10 mb-3 mb-sm-0">
         {
-          (Carts.length !== 0) ? Carts.map(product => <CartProduct data={product} />) : <EmptyCart />
+          (Carts.length !== 0) ? Carts.map(product => <CartProduct key={product.id} data={product} />) : <EmptyCart />
         }
 
         </div>
-        <div class="col-sm-2">
-          <div class="card sticky-summary">
+        <div className="col-sm-2">
+          <div className="card sticky-summary">
             <CartSummary data={Carts} />
           </div>
         </div>

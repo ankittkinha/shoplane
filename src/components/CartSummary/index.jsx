@@ -13,21 +13,21 @@ export default function CartSummary(props) {
 
 
     return (
-        <div class="card-body greyish-back" style={{ width: "100%" }}>
-            <h5 class="card-title">Order Summary</h5>
-            <p class="card-text cart-summary-text">
+        <div className="card-body greyish-back" style={{ width: "100%" }}>
+            <h5 className="card-title">Order Summary</h5>
+            <p className="card-text cart-summary-text">
                 <span>Subtotal</span>
                 <span>&#36; {Math.round(subtotal)}</span>
             </p>
-            <p class="card-text cart-summary-text">
+            <p className="card-text cart-summary-text">
                 <span>Shipping Charges</span>
                 <span>&#36; {shippingCharges}</span>
             </p>
-            <p class="card-text cart-summary-text">
+            <p className="card-text cart-summary-text">
                 <span>Tax Estimate</span>
                 <span>&#36; {Math.round(taxEstimate)}</span>
             </p>
-            <p class="card-text cart-summary-text">
+            <p className="card-text cart-summary-text">
                 <span>Order Total</span>
                 <span>&#36; {(Math.round(subtotal) + shippingCharges + Math.round(taxEstimate))}</span>
             </p>
