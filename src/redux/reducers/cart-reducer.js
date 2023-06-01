@@ -9,63 +9,85 @@ export const cartReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case ActionTypes.ADD_TO_CART:
             if (state.numberCart === 0) {
-                console.log("new item");
-                let item = {
+                const item = {
                     ...payload,
                     quantity: 1,
                 };
-                state.Carts.push(item);
+                return {
+                    ...state,
+                    numberCart: 1,
+                    Carts: [item],
+                };
             } else {
                 let check = false;
-                state.Carts.map((item, index) => {
+                const updatedCarts = state.Carts.map((item) => {
                     if (item.id === payload.id) {
-                        console.log("id matched");
-                        state.Carts[index].quantity++;
                         check = true;
+                        return {
+                            ...item,
+                            quantity: item.quantity + 1,
+                        };
                     }
+                    return item;
                 });
                 if (!check) {
-                    let _item = {
+                    const newItem = {
                         ...payload,
                         quantity: 1,
                     };
-                    state.Carts.push(_item);
+                    return {
+                        ...state,
+                        Carts: [...state.Carts, newItem],
+                        numberCart: state.numberCart + 1,
+                    };
                 }
+                return {
+                    ...state,
+                    Carts: updatedCarts,
+                    numberCart: state.numberCart + 1
+                };
             }
-            return {
-                ...state,
-                numberCart: state.numberCart + 1,
-            };
 
         case ActionTypes.DELETE_FROM_CART:
-            let newCart = state.Carts.filter(item => item.id !== payload.id);
-            state.Carts = newCart;
+            const newCart = state.Carts.filter((item) => item.id !== payload.id);
             return {
                 ...state,
+                Carts: [...newCart],
                 numberCart: state.numberCart - payload.quantity,
             };
 
         case ActionTypes.INCREASE_QUANTITY:
-            state.Carts.forEach(item => {
+            const increasedCarts = state.Carts.map((item) => {
                 if (item.id === payload) {
-                    item.quantity++
+                    return {
+                        ...item,
+                        quantity: item.quantity + 1,
+                    };
                 }
-            })
+                return item;
+            });
             return {
                 ...state,
-                numberCart: state.numberCart + 1
+                Carts: increasedCarts,
+                numberCart: state.numberCart + 1,
             };
 
         case ActionTypes.DECREASE_QUANTITY:
-            state.Carts.forEach(item => {
-                    if (item.id === payload) {
-                        item.quantity--
+            const decreasedCarts = state.Carts.map((item) => {
+                if (item.id === payload) {
+                    return {
+                        ...item,
+                        quantity: item.quantity - 1,
+                    };
                 }
-            })
+                return item;
+            });
             return {
                 ...state,
-                numberCart: state.numberCart - 1
-            }
+                Carts: decreasedCarts,
+                numberCart: state.numberCart - 1,
+            };
+
         default:
             return state;
     }
