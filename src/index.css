@@ -334,9 +334,14 @@ code {
   justify-content: space-between;
 }
 
+.summary-div{
+  position: relative;
+}
+
 .sticky-summary {
   position: sticky;
-  top: 25%;
+  top: 186.8px;
+  width: 90%;
 }
 
 .plus-btn,
