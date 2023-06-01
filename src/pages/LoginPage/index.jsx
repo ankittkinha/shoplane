@@ -104,12 +104,17 @@ export default function LoginPage() {
                 </ErrorMessage>
               </div>
 
+              
+
               <div className="d-grid mb-3 mt-4">
                 <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
               </div>
               <div className="text-center">
+              <span>
+                  Forgot Password? Click <Link to="/reset">here</Link> to reset
+                </span>
                 <p>
                   Don't have an account? Sign up <Link to="/signup">here</Link>
                 </p>

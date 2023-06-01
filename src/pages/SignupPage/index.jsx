@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Endpoints from "../../api/Endpoints";
 
 export default function SignupPage() {
+
+  const navigate = useNavigate();
 
   const [response, setResponse] = useState({
     textMessage: "",
@@ -28,6 +30,10 @@ export default function SignupPage() {
     });
   };
 
+  const navToLogin = () => {
+    navigate("/login")
+}
+
   const handleSubmit = (values) => {
     axios.post(Endpoints.SIGNUP_URL, values)
       .then(res => {
@@ -43,7 +49,8 @@ export default function SignupPage() {
           alertClass: "alert alert-danger"
         })
       })
-    setTimeout(removeAlert, 4000)
+    setTimeout(removeAlert, 2700)
+    setTimeout(navToLogin, 3000)
   };
 
 

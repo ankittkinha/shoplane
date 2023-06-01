@@ -10,6 +10,7 @@ import CartPage from './pages/CartPage';
 import FavoritesPage from './pages/FavoritesPage';
 import { useEffect, useState } from 'react';
 import NotFoundPage from './pages/NotFoundPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/productdetails/:id" element={<ProductDetailspage/>} />
         <Route path="/cart" element={<CartPage/>} />
         <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/reset" element={<ForgotPasswordPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
