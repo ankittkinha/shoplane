@@ -31,7 +31,6 @@ export default function SignupPage() {
   const handleSubmit = (values) => {
     axios.post(Endpoints.SIGNUP_URL, values)
       .then(res => {
-        console.log(res)  //rempve it later
         setResponse({
           textMessage: "Registration Successful, Thank You",
           alertClass: "alert alert-success"

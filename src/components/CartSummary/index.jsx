@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 export default function CartSummary(props) {
-    console.log(props.data)
     let subtotal = 0;
 
     if (props.data) {

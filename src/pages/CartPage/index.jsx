@@ -9,8 +9,6 @@ export default function CartPage() {
 
   const { numberCart, Carts } = useSelector(state => state.cart);
 
-  console.log(numberCart)
-  console.log(Carts)
   return (
     <div>
       <Navbar />

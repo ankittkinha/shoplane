@@ -23,7 +23,6 @@ export default function ProductDetailspage() {
 
     const checkFavorites = () => {
         fav.forEach((item) => {
-            console.log("objId: " + typeof item.id);
             if (item.id == id) {
                 setFavorite(true);
             }
