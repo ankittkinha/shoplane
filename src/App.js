@@ -1,20 +1,15 @@
 import HomePage from './pages/HomePage';
-import { useRoutes, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ProductDetailspage from './pages/ProductDetailsPage';
-import ProductsList from './components/ProductsList';
-import ProductsPage from './pages/ProductsCategoryPage';
 import ProductsCategoryPage from './pages/ProductsCategoryPage';
 import CartPage from './pages/CartPage';
 import FavoritesPage from './pages/FavoritesPage';
-import { useEffect, useState } from 'react';
 import NotFoundPage from './pages/NotFoundPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 
 function App() {
-
-    
 
   return (
     <div className="mx-5">
