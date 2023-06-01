@@ -22,7 +22,7 @@ export default function Navbar() {
 
     return (
         <div className="navbar-component">
-            <nav className="navbar py-1 ">
+            <nav className="navbar py-1 main-nav">
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand"><span className="appName-nav">SHOP<span className="hName-nav">LANE</span></span></Link>
 
@@ -30,12 +30,12 @@ export default function Navbar() {
                         {  (!loginStatus) ? <LoggedOut /> : <LoggedIn /> }
 
                         <Link to="/favorites" className="btn btn-outline btn2-nav">
-                            <img src={emptyHeartImg} height="45px" width="45px" alt="image" />
+                            <img src={emptyHeartImg} height="50rem" alt="image" />
                         </Link>
 
-                        <Link to="/cart" className="btn btn-outline btn2-nav" type="submit">
-                            <img src={cartImg} height={"90%"} alt="image" />
-                            <span className="cart-items-num">{(cartNum > 0) ? cartNum : null}</span>
+                        <Link to="/cart" className="btn btn-outline btn3-nav" type="submit">
+                            <img src={cartImg} height="50rem" alt="image" />
+                            <span className={cartNum < 10 ? "cart-num" : "cart-num-1"}>{(cartNum > 0) ? cartNum : null}</span>
                         </Link>
 
                     </form>
