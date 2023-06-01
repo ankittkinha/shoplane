@@ -9,7 +9,6 @@ export const cartReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case ActionTypes.ADD_TO_CART:
             if (state.numberCart === 0) {
-                console.log("new item");
                 let item = {
                     ...payload,
                     quantity: 1,
@@ -19,7 +18,6 @@ export const cartReducer = (state = initialState, { type, payload }) => {
                 let check = false;
                 state.Carts.map((item, index) => {
                     if (item.id === payload.id) {
-                        console.log("id matched");
                         state.Carts[index].quantity++;
                         check = true;
                     }
