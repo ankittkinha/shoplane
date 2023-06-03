@@ -1,22 +1,30 @@
-import { ActionTypes } from "../constants/action-types";
+import { createSlice } from "@reduxjs/toolkit";
+
+const setItemsfunc = (items) => {
+  localStorage.setItem("fav", JSON.stringify(items))
+}
+
+const favItems = localStorage.getItem("fav") !== null ? JSON.parse(localStorage.getItem("fav")) : [];
 
 const initialState = {
-    favorites: []
-}
+  favorites: favItems
+};
 
-export const favoritesReducer = (state = initialState, { type, payload }) => {
-    switch (type) {
-        case ActionTypes.ADD_TO_FAVORITES:
-            return {
-                ...state,
-                favorites: [...state.favorites, payload]
-            };
-        case ActionTypes.REMOVE_FROM_FAVORITES:
-            return {
-                ...state,
-                favorites: state.favorites.filter(item => item.id !== payload)
-            };
-        default:
-            return state;
-    }
-}
+const favoritesSlice = createSlice({
+  name: "favorites",
+  initialState,
+  reducers: {
+    addToFavorites: (state, action) => {
+      state.favorites.push(action.payload);
+      setItemsfunc(state.favorites);
+    },
+    removeFromFavorites: (state, action) => {
+      state.favorites = state.favorites.filter(item => item.id !== action.payload);
+      setItemsfunc(state.favorites);
+    },
+  },
+});
+
+export const { addToFavorites, removeFromFavorites } = favoritesSlice.actions;
+
+export default favoritesSlice.reducer;

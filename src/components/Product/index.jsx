@@ -3,10 +3,10 @@ import cartImg from "../../images/cart-white.png";
 import RatingStars from "../RatingStars";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../redux/actions/cart-actions";
-import { addToFavorites, removeFromFavorites } from "../../redux/actions/fav-actions";
 import redHeartImg from "../../images/heart-992.svg";
 import emptyHeartImg from "../../images/heart-3510.svg";
+import { addToCart } from "../../redux/reducers/cart-reducer";
+import { addToFavorites, removeFromFavorites } from "../../redux/reducers/favorites-reducer";
 
 export default function Product(props) {
     const fav = useSelector((state) => state.favorites.favorites);

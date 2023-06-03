@@ -2,8 +2,8 @@ import React from "react";
 import RatingStars from "../RatingStars";
 import { BsPlusCircle, BsDashCircle } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import {decreaseQuantity, deleteFromCart, increaseQuantity} from "../../redux/actions/cart-actions";
 import { Link } from "react-router-dom";
+import { decreaseQuantity, deleteFromCart, increaseQuantity } from "../../redux/reducers/cart-reducer";
 
 export default function CartProduct(props) {
     const dispatch = useDispatch();
