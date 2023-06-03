@@ -21,7 +21,7 @@ export default function CartPage() {
 
         </div>
         <div className="col-sm-2 summary-div">
-          <div className="card sticky-summary">
+          <div className="card sticky-summary summary-div-1">
             <CartSummary data={Carts} />
           </div>
         </div>

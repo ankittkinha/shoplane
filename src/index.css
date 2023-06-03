@@ -338,6 +338,10 @@ code {
   position: relative;
 }
 
+.summary-div-1{
+  border: none;
+}
+
 .sticky-summary {
   position: sticky;
   top: 186.8px;

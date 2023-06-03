@@ -10,12 +10,12 @@ export const favoritesReducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 favorites: [...state.favorites, payload]
-            }
+            };
         case ActionTypes.REMOVE_FROM_FAVORITES:
             return {
                 ...state,
                 favorites: state.favorites.filter(item => item.id !== payload)
-            }
+            };
         default:
             return state;
     }
