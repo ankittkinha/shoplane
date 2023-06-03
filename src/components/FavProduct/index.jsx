@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import RatingStars from "../RatingStars";
 import { Link } from "react-router-dom";
 import cartImg from "../../images/cart-white.png";
-import { addToCart } from "../../redux/actions/cart-actions";
-import { removeFromFavorites } from "../../redux/actions/fav-actions";
 import redHeartImg from "../../images/heart-992.svg";
+import { addToCart } from "../../redux/reducers/cart-reducer";
+import { removeFromFavorites } from "../../redux/reducers/favorites-reducer";
 
 export default function FavProduct(props) {
     const dispatch = useDispatch();

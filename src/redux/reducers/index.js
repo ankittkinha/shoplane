@@ -1,5 +1,5 @@
-import { cartReducer } from "./cart-reducer";
-import { favoritesReducer } from "./favorites-reducer";
+import cartReducer from "./cart-reducer";
+import favoritesReducer from "./favorites-reducer";
 import { combineReducers } from "redux";
 
 export const allReducers = combineReducers({
