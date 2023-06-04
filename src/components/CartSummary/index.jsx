@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { emptyCart } from '../../redux/reducers/cart-reducer';
 
 export default function CartSummary(props) {
+
+    const dispatch = useDispatch();
 
     let cartNum = useSelector(state => state.cart.numberCart)
 
@@ -33,6 +36,7 @@ export default function CartSummary(props) {
                     textMessage: "Your order has been placed",
                     alertClass: "alert alert-success"
                 })
+                dispatch(emptyCart())
             } else {
                 setResponse({
                     textMessage: "You should login before placing your order.",
@@ -46,6 +50,7 @@ export default function CartSummary(props) {
             });
         };
         setTimeout(removeAlert, 2500)
+        
     }
 
     return (

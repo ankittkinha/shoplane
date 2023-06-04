@@ -53,6 +53,11 @@ const cartSlice = createSlice({
       state.numberCart -= payload.quantity;
       setItemsfunc(state.Carts, state.numberCart);
     },
+    emptyCart: (state, action) => {
+      state.Carts = [];
+      state.numberCart = 0;
+      setItemsfunc(state.Carts, state.numberCart);
+    },
     increaseQuantity: (state, action) => {
       const payload = action.payload;
       state.Carts.forEach((item) => {
@@ -81,6 +86,7 @@ export const {
   deleteFromCart,
   increaseQuantity,
   decreaseQuantity,
+  emptyCart
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
