@@ -65,7 +65,6 @@ export default function ProductDetailspage() {
 
     return (
         <div>
-            <Navbar />
             <div className="wrapper">
                 <div className="card mb-3" style={{ maxWidth: "60%" }}>
                     <div className="row g-0 inner-body">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import cartImg from "../../images/cart.svg";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoggedIn from "../LoggedIn";
 import LoggedOut from "../LoggedOut";
@@ -21,40 +21,44 @@ export default function Navbar() {
     }, [loginStatus])
 
     return (
-        <div className="navbar-component">
-            <nav className="navbar py-1 main-nav">
-                <div className="container-fluid">
-                    <Link to="/" className="navbar-brand"><span className="appName-nav">SHOP<span className="hName-nav">LANE</span></span></Link>
+        <div className="">
+            <div className="navbar-component">
+                <nav className="navbar py-1 main-nav">
+                    <div className="container-fluid">
+                        <Link to="/" className="navbar-brand"><span className="appName-nav">SHOP<span className="hName-nav">LANE</span></span></Link>
 
-                    <form className="d-flex cta main-drop-nav" role="search">
-                        {  (!loginStatus) ? <LoggedOut /> : <LoggedIn /> }
+                        <form className="d-flex cta main-drop-nav" role="search">
+                            {(!loginStatus) ? <LoggedOut /> : <LoggedIn />}
 
-                        <Link to="/favorites" className="btn btn-outline btn2-nav">
-                            <img src={emptyHeartImg} height="50rem" alt="image" />
-                        </Link>
+                            <Link to="/favorites" className="btn btn-outline btn2-nav">
+                                <img src={emptyHeartImg} height="50rem" alt="image" />
+                            </Link>
 
-                        <Link to="/cart" className="btn btn-outline btn3-nav" type="submit">
-                            <img src={cartImg} height="50rem" alt="image" />
-                            <span className={cartNum < 10 ? "cart-num" : "cart-num-1"}>{(cartNum > 0) ? cartNum : null}</span>
-                        </Link>
+                            <Link to="/cart" className="btn btn-outline btn3-nav" type="submit">
+                                <img src={cartImg} height="50rem" alt="image" />
+                                <span className={cartNum < 10 ? "cart-num" : "cart-num-1"}>{(cartNum > 0) ? cartNum : null}</span>
+                            </Link>
 
-                    </form>
-                </div>
-            </nav>
-            <hr />
-
-            <div className='categoriesbar-component'>
-                <div>
-                    <ul className='category-bar'>
-                        <li className="products-title"><Link to="/"><i>All</i></Link></li>
-                        <li className="products-title"><Link to="/products/electronics"><i>Electronics</i></Link></li>
-                        <li className="products-title"><Link to="/products/jewelery"><i>Jewellery</i></Link></li>
-                        <li className="products-title"><Link to="/products/men's clothing"><i>Men's Clothing</i></Link></li>
-                        <li className="products-title"><Link to="/products/women's clothing"><i>Women's Clothing</i></Link></li>
-                    </ul>
-                </div>
+                        </form>
+                    </div>
+                </nav>
                 <hr />
+
+                <div className='categoriesbar-component'>
+                    <div>
+                        <ul className='category-bar'>
+                            <li className="products-title"><Link to="/"><i>All</i></Link></li>
+                            <li className="products-title"><Link to="/products/electronics"><i>Electronics</i></Link></li>
+                            <li className="products-title"><Link to="/products/jewelery"><i>Jewellery</i></Link></li>
+                            <li className="products-title"><Link to="/products/men's clothing"><i>Men's Clothing</i></Link></li>
+                            <li className="products-title"><Link to="/products/women's clothing"><i>Women's Clothing</i></Link></li>
+                        </ul>
+                    </div>
+                    <hr />
+                </div>
             </div>
+
+            <Outlet />
         </div>
     );
 }

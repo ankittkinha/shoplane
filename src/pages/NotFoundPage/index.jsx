@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 export default function NotFoundPage() {
     return (
         <div>
-            <Navbar />
             <div className="card text-center mt-5" style={{width: "50%", margin: "auto"}}>
                 <div className="card-header">
                     <h6>Requested Page doesn't exist</h6>

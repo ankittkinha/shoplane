@@ -78,7 +78,6 @@ export default function SignupPage() {
 
   return (
     <div>
-      <Navbar />
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}

@@ -34,7 +34,9 @@ export default function LoginPage() {
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("username", detailsObj.username);
         }
+        
         navigate("/");
+        window.location.reload();
       })
       .catch(error => {
         console.log(error);
@@ -55,7 +57,6 @@ export default function LoginPage() {
   });
   return (
     <div>
-      <Navbar />
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}

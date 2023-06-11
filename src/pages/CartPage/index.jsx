@@ -11,7 +11,6 @@ export default function CartPage() {
 
   return (
     <div>
-      <Navbar />
 
       <div className="row">
         <div className="col-sm-10 mb-3 mb-sm-0">

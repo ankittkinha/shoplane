@@ -5,7 +5,6 @@ import ProductsList from '../../components/ProductsList';
 export default function HomePage() {
   return (
     <div>
-      <Navbar />
       <ProductsList />
     </div>
   )

@@ -22,7 +22,6 @@ export default function ProductsCategoryPage() {
 
     return (
         <div>
-            <Navbar />
             <div className="row">
                 {
                     products.map((product => <Product key={product.id} data={product} />))

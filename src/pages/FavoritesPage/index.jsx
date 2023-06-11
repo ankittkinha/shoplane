@@ -10,7 +10,6 @@ export default function FavoritesPage() {
 
   return (
     <div>
-      <Navbar />
       <div className='row'>
         {
           (products.length !== 0) ? products.map(item => <FavProduct key={item.id} data={item} />) : <EmptyFavorites />
